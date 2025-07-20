@@ -2,122 +2,137 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Register - Auction System</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <style>
-        body {
-            background: linear-gradient(135deg, #e67e22, #f39c12);
-            font-family: 'Roboto', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        body,
+        html {
             margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .register-container {
-            background: #fff;
-            padding: 40px;
-            border-radius: 10px;
+        .register {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff6e7f);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
             width: 100%;
             max-width: 400px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            animation: slideIn 1s ease-in-out;
+            border-radius: 10px;
         }
 
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 10px;
+            color: #333;
         }
 
         h2 {
             text-align: center;
-            margin-bottom: 20px;
-            color: #e67e22;
+            margin-bottom: 1.5rem;
         }
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"] {
-            width: 100%;
-            padding: 14px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 6px;
+        .input-group {
+            margin-bottom: 1rem;
         }
 
-        .toggle-password {
-            float: right;
-            margin-right: 10px;
-            margin-top: -32px;
-            position: relative;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        button {
-            width: 100%;
-            background: #d35400;
-            color: white;
-            border: none;
-            padding: 14px;
-            border-radius: 6px;
-            font-size: 16px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background 0.3s ease;
-        }
-
-        button:hover {
-            background: #a84300;
-        }
-
-        .link {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .link a {
-            color: #e67e22;
-            text-decoration: none;
+        .input-group label {
+            display: block;
             font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #ff9800;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68900;
+        }
+
+        .login-link {
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .login-link a {
+            color: #ff9800;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="register-container">
-        <h2>Register</h2>
-        <form action="/register" method="POST">
-            <input type="text" name="username" placeholder="Username" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <input type="password" id="register-password" name="password" placeholder="Password" required />
-            <span class="toggle-password" onclick="togglePassword('register-password')">Show</span>
-            <button type="submit">Register</button>
-        </form>
-        <div class="link">
-            Already have an account? <a href="login.html">Login</a>
+    <section class="register">
+        <div class="overlay">
+            <div class="form-container">
+                <h2>Create an Account</h2>
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm">Confirm Password</label>
+                        <input type="password" id="confirm" name="confirm" required />
+                    </div>
+                    <button type="submit" class="btn-register">Register</button>
+                    <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+                </form>
+            </div>
         </div>
-    </div>
-
-    <script>
-        function togglePassword(id) {
-            const input = document.getElementById(id);
-            input.type = input.type === "password" ? "text" : "password";
-        }
-    </script>
-
+    </section>
 </body>
 
 </html>

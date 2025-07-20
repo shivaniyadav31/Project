@@ -4,119 +4,119 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Auction Management - Login</title>
+    <title>Login - AuctionPro</title>
     <style>
-        * {
+        body,
+        html {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        body {
-            background: linear-gradient(to right, #eb7d08, #eb7d08);
+        .login {
             height: 100vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
+            background: linear-gradient(to right, #1e3c72, #2a5298, #ff6e7f );
         }
 
-        .login-container {
-            background: #fff;
-            padding: 40px 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        .overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
             width: 100%;
             max-width: 400px;
+            border-radius: 10px;
         }
 
-        .login-container h2 {
-            text-align: center;
-            margin-bottom: 25px;
+        .form-container {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 10px;
             color: #333;
         }
 
-        .form-group {
-            margin-bottom: 20px;
-            position: relative;
+        h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
         }
 
-        .form-group label {
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input-group label {
             display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
         }
 
-        .form-group input {
+        .input-group input {
             width: 100%;
-            padding: 12px;
-            padding-left: 14px;
-            border-radius: 6px;
-            border: 1.5px solid #ccc;
-            transition: all 0.3s ease;
+            padding: 0.7rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
 
-        .form-group input:focus {
-            border-color: #eb7d08;
-            outline: none;
-            box-shadow: 0 0 6px rgba(0, 123, 255, 0.3);
-        }
-
-        .login-btn {
+        .btn {
             width: 100%;
-            padding: 12px;
-            background-color: #eb7d08;
+            padding: 0.75rem;
+            background-color: #ff9800;
+            border: none;
             color: white;
             font-weight: bold;
-            border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: background 0.3s;
         }
 
-        .login-btn:hover {
-            background-color: #eb7d08;
+        .btn:hover {
+            background-color: #e68900;
         }
 
-        .extra-links {
-            margin-top: 15px;
+        .options {
             text-align: center;
+            margin-top: 1rem;
+            font-size: 0.9rem;
         }
 
-        .extra-links a {
-            color: #eb7d08;
+        .options a {
+            color: #ff9800;
             text-decoration: none;
-            font-size: 0.9em;
         }
 
-        .extra-links a:hover {
+        .options a:hover {
             text-decoration: underline;
         }
     </style>
+    <link rel="stylesheet" href="login.css" />
 </head>
 
 <body>
-    <div class="login-container">
-        <h2>Auction System Login</h2>
-        <form>
-            <div class="form-group">
-                <label for="username">Username or Email</label>
-                <input type="text" id="username" placeholder="Enter your username" required />
+
+    <section class="login">
+        <div class="overlay">
+            <div class="form-container">
+                <h2>Login to Your Account</h2>
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required />
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <p class="options">
+                        <a href="#">Forgot password?</a> |
+                        <a href="register.html">Register</a>
+                    </p>
+                </form>
             </div>
-
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" placeholder="Enter your password" required />
-            </div>
-
-            <button type="submit" class="login-btn">Login</button>
-        </form>
-
-        <div class="extra-links">
-            <p><a href="#">Forgot Password?</a></p>
-            <p>Don't have an account? <a href="#">Register Here</a></p>
         </div>
-    </div>
+    </section>
+
 </body>
 
 </html>

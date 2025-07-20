@@ -5,7 +5,7 @@ app.secret_key = 'supersecretmre'
 
 @app.route('/')
 def index():
-    return render_template('landing.html')
+    return render_template('index.html')
 
 @app.route('/register')
 def register():
