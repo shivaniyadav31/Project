@@ -15,5 +15,13 @@ def register():
 def login():
     return render_template('login.html')
 
+@app.route('/add_item')
+def add_item():
+    return render_template('add_item.html')
+
+@app.route('/bid1')
+def bid1():
+    return render_template('bid1.html')
+
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000, debug=True)
