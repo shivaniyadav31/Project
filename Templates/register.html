@@ -2,137 +2,142 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register</title>
-    <style>
-        body,
-        html {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <title>Register Page</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-        .register {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(-45deg, #1e3c72, #2a5298, #ff6e7f);
-            background-size: 400% 400%;
-        }
+    body {
+      height: 100vh;
+      background: linear-gradient(to right, #e54d79, #f07545);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-        @keyframes gradientBG {
-            0% {
-                background-position: 0% 50%;
-            }
+    .container {
+      width: 900px;
+      background: #fff;
+      display: flex;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
 
-            50% {
-                background-position: 100% 50%;
-            }
+    .left {
+      width: 45%;
+      background: linear-gradient(135deg, #ff9a44, #ff6126);
+      padding: 60px 40px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-            100% {
-                background-position: 0% 50%;
-            }
-        }
+    .left h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
 
-        .overlay {
-            background: rgba(0, 0, 0, 0.5);
-            padding: 2rem;
-            width: 100%;
-            max-width: 400px;
-            border-radius: 10px;
-        }
+    .left p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
 
-        .form-container {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 10px;
-            color: #333;
-        }
+    .right {
+      width: 55%;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        h2 {
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
+    .right h2 {
+      margin-bottom: 20px;
+      color: #444;
+    }
 
-        .input-group {
-            margin-bottom: 1rem;
-        }
+    .form-group {
+      margin-bottom: 20px;
+    }
 
-        .input-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 0.3rem;
-        }
+    .form-group input {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
 
-        .input-group input {
-            width: 100%;
-            padding: 0.7rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
+    .form-group input:focus {
+      outline: none;
+      border-color: #f0743b;
+    }
 
-        .btn {
-            width: 100%;
-            padding: 0.75rem;
-            background-color: #ff9800;
-            border: none;
-            color: white;
-            font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
+    .btn {
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      padding: 14px;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 5px 10px rgba(255, 105, 50, 0.3);
+      transition: transform 0.2s;
+    }
 
-        .btn:hover {
-            background-color: #e68900;
-        }
+    .btn:hover {
+      transform: scale(1.03);
+    }
 
-        .login-link {
-            text-align: center;
-            margin-top: 1rem;
-        }
+    .text-center {
+      margin-top: 15px;
+      text-align: center;
+      font-size: 14px;
+    }
 
-        .login-link a {
-            color: #ff9800;
-            text-decoration: none;
-        }
+    .text-center a {
+      color: #f07545;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        .login-link a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    .text-center a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 
 <body>
-    <section class="register">
-        <div class="overlay">
-            <div class="form-container">
-                <h2>Create an Account</h2>
-                <form action="#" method="post">
-                    <div class="input-group">
-                        <label for="username">Username</label>
-                        <input type="text" id="username" name="username" required />
-                    </div>
-                    <div class="input-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required />
-                    </div>
-                    <div class="input-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" required />
-                    </div>
-                    <div class="input-group">
-                        <label for="confirm">Confirm Password</label>
-                        <input type="password" id="confirm" name="confirm" required />
-                    </div>
-                    <button type="submit" class="btn-register">Register</button>
-                    <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
-                </form>
-            </div>
+  <div class="container">
+    <div class="left">
+      <h1>Welcome to <br> AuctionPro!</h1>
+      <p>Create your account to get started.</p>
+    </div>
+    <div class="right">
+      <h2>Register Account</h2>
+      <form>
+        <div class="form-group">
+          <input type="text" placeholder="Full Name" required>
         </div>
-    </section>
+        <div class="form-group">
+          <input type="email" placeholder="E-mail Address" required>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" required>
+        </div>
+        <button class="btn" type="submit">Register</button>
+        <div class="text-center">
+          Already have an account? <a href="login.html">Login here</a>
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
