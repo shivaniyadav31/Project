@@ -138,6 +138,35 @@
             padding: 20px;
             margin-top: 40px;
         }
+
+        .search-bar form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar input[type="text"] {
+            width: 70%;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background: #2980b9;
+        }
     </style>
 </head>
 
@@ -160,8 +189,12 @@
 
     <!-- Search Bar -->
     <div class="search-bar">
-        <input type="text" placeholder="Search for items...">
+        <form action="#" method="get">
+            <input type="text" name="query" placeholder="Search for items...">
+            <button type="submit">Search</button>
+        </form>
     </div>
+
 
     <!-- Live Auctions -->
     <div class="container">
@@ -213,7 +246,8 @@
             </div>
 
             <div class="item-card">
-                <img src="https://i.pinimg.com/736x/90/e7/dd/90e7dd41e5d4e908a00e9072969574cd.jpg" alt="Vintage Typewriter">
+                <img src="https://i.pinimg.com/736x/90/e7/dd/90e7dd41e5d4e908a00e9072969574cd.jpg"
+                    alt="Vintage Typewriter">
                 <div class="item-info">
                     <h3>Rare Coins</h3>
                     <p>Starting Bid Amount: $180</p>
@@ -222,7 +256,8 @@
             </div>
 
             <div class="item-card">
-                <img src="https://i.pinimg.com/736x/c6/be/9e/c6be9e8272efbc60def390372d2413b5.jpg" alt="Antique Pocket Watch">
+                <img src="https://i.pinimg.com/736x/c6/be/9e/c6be9e8272efbc60def390372d2413b5.jpg"
+                    alt="Antique Pocket Watch">
                 <div class="item-info">
                     <h3>Gold Pocket Watch</h3>
                     <p>Starting Bid Amount: $560</p>

@@ -30,9 +30,21 @@ def login():
 def add_item():
     return render_template('add_item.html')
 
-@app.route('/bid1')
+@app.route('/item_added.html')
+def item_added():
+    return render_template('item_added.html.html')
+
+@app.route('/bid1.html')
 def bid1():
     return render_template('bid1.html')
+
+@app.route('/register_success.html')
+def register_success():
+    return render_template('register_success.html')
+
+@app.route('/login_success.html')
+def login_success():
+    return render_template('login_success.html')
 
 if __name__ == '__main__':
     app.run(host = '0.0.0.0', port = 5000, debug=True)

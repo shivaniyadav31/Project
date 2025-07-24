@@ -21,7 +21,7 @@
     }
 
     .container {
-      width: 900px;
+      width: 950px;
       background: #fff;
       display: flex;
       border-radius: 12px;
@@ -121,7 +121,7 @@
     </div>
     <div class="right">
       <h2>Register Account</h2>
-      <form>
+      <form action="register_success.html" method="post" enctype="multipart/form-data">
         <div class="form-group">
           <input type="text" placeholder="Full Name" required>
         </div>
@@ -130,6 +130,9 @@
         </div>
         <div class="form-group">
           <input type="password" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Confirm Your Password" required>
         </div>
         <button class="btn" type="submit">Register</button>
         <div class="text-center">
