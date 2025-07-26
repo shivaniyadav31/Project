@@ -168,6 +168,25 @@
             background: #2980b9;
         }
     </style>
+    <script>
+        document.querySelector('.search-bar form').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent form from reloading the page
+
+            const query = document.querySelector('input[name="query"]').value.toLowerCase();
+            const items = document.querySelectorAll('.item-card');
+
+            items.forEach(item => {
+                const title = item.querySelector('h3').textContent.toLowerCase();
+
+                if (title.includes(query)) {
+                    item.style.display = 'flex'; // Show matching item
+                } else {
+                    item.style.display = 'none'; // Hide non-matching item
+                }
+            });
+        });
+    </script>
+
 </head>
 
 <body>
@@ -179,8 +198,9 @@
             <nav>
                 <a href="login.html">Login</a>
                 <a href="register.html">Register</a>
-                <a href="add_item.html">Add Item</a>
-            </nav>
+                <a href="account.html">My Account</a>
+                <a href="profile.html"></a>
+             </nav>
         </div>
         <div class="hero-text">
             <h2>Bid on Treasures, Vintage & More</h2>
@@ -189,7 +209,7 @@
 
     <!-- Search Bar -->
     <div class="search-bar">
-        <form action="#" method="get">
+        <form action="" method="get">
             <input type="text" name="query" placeholder="Search for items...">
             <button type="submit">Search</button>
         </form>

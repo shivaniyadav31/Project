@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile - AuctionPro</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to right, #ff416c, #ff4b2b);
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: #555;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+        }
+
+        .btn {
+            background: #ff416c;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #e0315a;
+        }
+
+        .nav {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #ff416c;
+            font-weight: bold;
+            margin-left: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="nav">
+            <a href="account.html">← Back to Dashboard</a>
+            <a href="login.html">Logout</a>
+        </div>
+
+        <h1>My Profile</h1>
+
+        <form action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+            <label for="password">New Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter new password" />
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter new password" />
+
+            <button type="submit" class="btn">Update Profile</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 AuctionPro — All rights reserved
+    </footer>
+</body>
+
+</html>
