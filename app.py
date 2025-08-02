@@ -57,7 +57,7 @@ def auctionform():
     if 'user_id' not in session:
         return redirect(url_for('login'))
 
-    categories = Category.query.all()
+    categories = category.query.all()
 
     if request.method == 'POST':
         ...
