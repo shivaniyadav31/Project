@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Create Auction - Auction Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #f3f4f7, #dfe9f3);
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        .container {
+            padding: 40px 50px;
+        }
+
+        .container h2 {
+            font-size: 26px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        button {
+            padding: 12px 20px;
+            background-color: #0d6efd;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #084cdf;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 15px 50px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Auction Admin Panel</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="auctions.html">Auctions</a>
+            <a href="users.html">Users</a>
+            <a href="categories.html">Categories</a>
+            <a href="logout.html">Logout</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Create New Auction</h2>
+
+        <form method="POST">
+            <label for="title">Auction Title</label>
+            <input type="text" name="title" id="title" placeholder="Enter auction title" required>
+
+            <label for="description">Description</label>
+            <textarea name="description" id="description" rows="4" placeholder="Enter item description..."
+                required></textarea>
+
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" id="start_date" required>
+
+            <label for="end_date">End Date</label>
+            <input type="date" name="end_date" id="end_date" required>
+
+            <label for="category_id">Category</label>
+            <select name="category_id" id="category_id" required>
+                <option value="" disabled selected>Select a category</option>
+                {% for category in categories %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+                {% endfor %}
+            </select>
+
+            <button type="submit">Create Auction</button>
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2025 Auction Management System
+    </footer>
+
+</body>
+
+</html>

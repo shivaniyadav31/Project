@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>AuctionPro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset and font */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(to right, #eef2f3, #8e9eab);
+            color: #333;
+        }
+
+        header {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 600;
+        }
+
+        nav a {
+            color: white;
+            margin-left: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffc107;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 30px 60px 30px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+            color: #2c3e50;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 20px auto;
+            color: #555;
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            padding: 50px 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            width: 280px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            margin-bottom: 15px;
+            color: #0d6efd;
+        }
+
+        .card p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 50px;
+            text-align: center;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>AuctionPro</h1>
+        <nav>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h2>Manage Auctions with Ease</h2>
+        <p>
+            Welcome to the AuctionPro — your centralized platform to manage users, categories,
+            bidding activity, and auctions with full control and real-time insights.
+        </p>
+    </section>
+
+    <section class="features">
+        <div class="card">
+            <h3>Admin Panel</h3>
+            <p>Access a powerful dashboard to monitor users, auctions, and system status in real time.</p>
+        </div>
+        <div class="card">
+            <h3>User Management</h3>
+            <p>View and manage registered users, their bidding history, and credentials safely.</p>
+        </div>
+        <div class="card">
+            <h3>Auction Listings</h3>
+            <p>Create, update, or remove auction events with start and end times, and categories.</p>
+        </div>
+        <div class="card">
+            <h3>Secure Bidding</h3>
+            <p>Track bids per auction with accurate timestamps, user linkage, and price control.</p>
+        </div>
+        <div class="card">
+            <h3>Category Manager</h3>
+            <p>Organize auctions by category to improve filtering, relevance, and user navigation.</p>
+        </div>
+        <div class="card">
+            <h3>Reports & Logs</h3>
+            <p>Generate insights and logs to understand platform performance and user trends.</p>
+        </div>
+    </section>
+
+    <footer>
+        &copy; 2025 Auction Management System. All rights reserved.
+    </footer>
+
+</body>
+
+</html>
